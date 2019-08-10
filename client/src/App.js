@@ -12,7 +12,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        {/* <header className="App-header">
+        <header className="App-header">
           <img src={logo} className="App-logo" alt="apple" />
           <p>Enter Your Class Room Number</p>
           <Input
@@ -24,7 +24,7 @@ class App extends Component {
           variant="contained">
           Submit
           </Button>
-        </header> */}
+        </header>
       </div>
     );
   }
