@@ -7,5 +7,8 @@ router.route("/")
     .post(userController.create)
     .get(userController.getAll);
 
+router.route("/:username")
+    .get(userController.findByUserName);
+
 
 module.exports = router;
