@@ -1,0 +1,41 @@
+#root {
+    min-height: 100%;
+  /* equal to footer height */
+  margin-bottom: -142px; 
+}
+
+.footer {
+    margin-top:-100px;
+    position: absolute;
+    bottom:0; 
+    left: 0;
+    right: 0;
+	height: 38px;
+    width: 100%;
+    background-color: #09868b;
+}
+
+#icons-license {
+    position: absolute;
+    width: 100%;
+    color: #fff;
+    line-height: 40px;
+    font-size: 8px;
+    text-align: center;
+    bottom:0;
+}
+
+.license {
+    color: rgb(226, 195, 195);
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+body, html {
+    font-family: "Proxima Nova","Helvetica Neue","Helvetica","Roboto","Arial",sans-serif;
+    background-color: #76c1d4;
+    height:100%;
+    margin:0;
+    padding:0;
+}

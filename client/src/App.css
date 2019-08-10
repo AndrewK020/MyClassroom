@@ -1,20 +1,20 @@
 .App {
   text-align: center;
+  height:100%;
+  min-height:300px;
 }
 
 .App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+  height: 35vmin;
+  padding: 50px;
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #76c1d4;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
 }
@@ -30,4 +30,8 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+#submitRoomBtn {
+  margin: 10px;
 }
