@@ -8,14 +8,6 @@ import './App.css';
 
 
 class App extends Component {
-  state = {
-      data: null
-    };
-
-
-  componentDidMount() {
-    console.log("Mounted!");
-  }
   
   render() {
     return (
@@ -33,7 +25,6 @@ class App extends Component {
           Submit
           </Button>
         </header>
-        <p className="App-intro">{this.state.data}</p>
       </div>
     );
   }
