@@ -6,10 +6,17 @@ var mongoose = require('mongoose'),
 var UserSchema = new Schema({
     username: { 
         type: String, 
+        trim: true,
         required: true, 
         index: { unique: true } 
     },
-    password: { type: String, required: true }
+    password: { type: String, required: true },
+    quizes: [
+        {
+            type: Schema.Types.ObjectId,
+            ref: "Quiz"
+        }
+    ]
 });
 // * Automatically hash the password before it is saved
 UserSchema.pre('save', function(next) {
