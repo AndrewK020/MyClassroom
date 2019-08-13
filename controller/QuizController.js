@@ -2,7 +2,6 @@ const db = require("../models");
 
 module.exports = {
 
-    // params will contain user object id
     create: function(req, res) {
         const newQuiz = req.body.quiz;
         const userObjectId = req.body.id;
@@ -13,10 +12,16 @@ module.exports = {
             })
             .then(dbUser => {
                 res.json(dbUser);
-            })
-            .catch( err => {
+            }).catch( err => {
                 res.json(err);
             });
+    },
+// params will contain user object id
+    delete: (req, res) => {
+        console.log("hit");
+        db.Quiz.remove({ _id: req.params.id }).then((dbQuiz) => {
+            res.json(dbQuiz);
+        });
     },
 
     getAll: function(req, res) {

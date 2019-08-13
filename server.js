@@ -19,6 +19,6 @@ if (process.env.NODE_ENV === "production") {
 }
 
 // Connect to the Mongo DB
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/MyClassroom");
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/MyClassroom", { useNewUrlParser: true });
 
 app.listen(port, () => console.log(`🏹 Listening on port ${port}`));

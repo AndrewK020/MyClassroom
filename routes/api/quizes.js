@@ -3,9 +3,10 @@ const quizController = require("../../controller/QuizController");
 
 // * route: /api/quizes
 
-router.route("/").get(quizController.getAll);
-
 router.route("/")
-    .post(quizController.create);
+    .post(quizController.create)
+    .get(quizController.getAll);
+
+router.route("/:id").delete(quizController.delete);
 
 module.exports = router;

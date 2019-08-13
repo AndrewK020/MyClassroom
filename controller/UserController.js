@@ -12,14 +12,14 @@ module.exports = {
 
     delete: function(req, res) {
         db.User.remove({ _id: req.params.id }).then(function(dbUser) {
-        res.json(dbUser);
+            res.json(dbUser);
         });
     },
 
     findByUserName: function(req, res) {
         console.log(req.params);
         db.User.find({ username: req.params.username }).then(function(dbUser) {
-        res.json(dbUser);
+            res.json(dbUser);
         });
     },
 
