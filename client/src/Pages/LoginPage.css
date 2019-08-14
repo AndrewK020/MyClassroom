@@ -1,0 +1,25 @@
+.loginContainer {
+    width: 40%;
+    background: white;
+    padding: 25px;
+    margin-top: 75px;
+}
+
+.form-label {
+    color: #db4968;
+}
+
+#loginSubmit {
+    background-color: #db4968;
+}
+
+#createSubmit {
+    float: right;
+}
+
+#homeBtn {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
