@@ -18,7 +18,6 @@ module.exports = {
     },
 // params will contain user object id
     delete: (req, res) => {
-        console.log("hit");
         db.Quiz.remove({ _id: req.params.id }).then((dbQuiz) => {
             res.json(dbQuiz);
         });

@@ -10,5 +10,7 @@ router.route("/")
 router.route("/:username")
     .get(userController.findByUserName);
 
+router.route("/login")
+    .post(userController.validate);
 
 module.exports = router;

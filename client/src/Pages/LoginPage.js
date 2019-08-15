@@ -24,7 +24,7 @@ class LoginPage extends Component {
         const newUser = {
             username: this.state.username,
             password: this.state.password
-        }
+        };
         console.log(newUser);
         API.createUser(newUser)
         .then(res => console.log("success"))
@@ -43,6 +43,19 @@ class LoginPage extends Component {
         });
 
       };
+
+      handleLogin = event => {
+          event.preventDefault();
+          const loginUser = {
+            username: this.state.username,
+            password: this.state.password
+        };
+
+        API.loginUser(loginUser)
+        .then(res => console.log(res.data))
+        .catch(err => console.log(err));
+      }
+
       handleChange = event => {
         const value = event.target.value;
         const name = event.target.name;
@@ -73,7 +86,7 @@ class LoginPage extends Component {
                     <Form.Group controlId="formBasicCheckbox">
                         <Form.Check type="checkbox" label="Check me out" />
                     </Form.Group>
-                    <Button id="loginSubmit" variant="primary" type="submit">
+                    <Button id="loginSubmit" variant="primary" type="submit" onClick={this.handleLogin}>
                         Login
                     </Button>
                     <Button id="createSubmit" variant="outline-success" type="submit" onClick={this.handleFormSubmit}>

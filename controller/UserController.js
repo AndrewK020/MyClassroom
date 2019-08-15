@@ -17,7 +17,6 @@ module.exports = {
     },
 
     findByUserName: function(req, res) {
-        console.log(req.params);
         db.User.find({ username: req.params.username }).then(function(dbUser) {
             res.json(dbUser);
         });
@@ -28,6 +27,21 @@ module.exports = {
         .find(req.query)
         .then(dbModel => res.json(dbModel))
         .catch(err => res.status(422).json(err));
+    },
+
+    validate: function(req, res) {
+        const reqUser = req.body;
+
+        db.User.findOne({username: reqUser.username}, function(err, user) {
+            if (err) throw err;
+            user.comparePassword(reqUser.password, function(err, isMatch) {
+                if (err) throw err;
+                console.log(reqUser.password, isMatch);
+                res.json({
+                    isMatch: isMatch
+                });
+            });
+        });
     }
 
 };
