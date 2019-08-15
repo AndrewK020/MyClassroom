@@ -4,9 +4,10 @@ import LoginPage from "./Pages/LoginPage";
 
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
-
-
 class App extends Component {
+  state = {
+    authed: false
+  }
 
   
   render() {
@@ -15,7 +16,7 @@ class App extends Component {
       <div>
         <Switch>
           <Route exact path="/" component={StartPage} />
-          <Route exact path="/login" component={LoginPage} />
+          <Route exact path="/login" component={LoginPage}/>
         </Switch>
       </div>
     </Router>
