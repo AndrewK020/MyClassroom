@@ -28,5 +28,10 @@ module.exports = {
         .find(req.query)
         .then(dbModel => res.json(dbModel))
         .catch(err => res.status(422).json(err));
+    },
+    find: function (req, res) {
+        db.Quiz.find({ _id: req.params.id }).then(function(dbUser) {
+            res.json(dbUser);
+        });
     }
 };

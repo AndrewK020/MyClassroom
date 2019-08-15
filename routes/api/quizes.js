@@ -7,6 +7,9 @@ router.route("/")
     .post(quizController.create)
     .get(quizController.getAll);
 
-router.route("/:id").delete(quizController.delete);
+router.route("/:id")
+    .get(quizController.find)
+    .delete(quizController.delete);
+
 
 module.exports = router;
